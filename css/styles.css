@@ -452,10 +452,6 @@ p {
   letter-spacing: 0.02em;
   color: #fff;
 }
-.footer-icon-list {
-  display: flex;
-  align-items: center;
-}
 
 .footer-icon-list {
   display: flex;
@@ -488,22 +484,27 @@ p {
 
 /*#region subscribe-form*/
 .footer-subscribe-contact {
-  align-items: center;
-  margin-right: 3px;
-  margin-left: auto;
-}
-
-.footer-subscribe-label {
   display: block;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-text {
+  margin-left: 50px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
 }
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-input-btn-box {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .subscribe-input {
@@ -511,10 +512,15 @@ p {
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  margin-right: 24px;
   background-color: transparent;
   padding-left: 16px;
   color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -531,14 +537,23 @@ p {
 }
 .subscribe-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   color: #fff;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  border: none;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe-icon-span {
@@ -582,8 +597,7 @@ p {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-open {
@@ -600,6 +614,7 @@ p {
 /*#region close btn*/
 .modal-close-btn {
   display: flex;
+  padding: 0;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -611,7 +626,9 @@ p {
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
@@ -664,7 +681,8 @@ p {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
-  outline: none;
+  outline: transparent;
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
@@ -673,9 +691,9 @@ p {
 .modal-user-icon {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 16px;
   transform: translateY(-50%);
-  margin-left: 16px;
+
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -702,7 +720,7 @@ p {
 .modal-coment-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 120px;
 
   font-weight: 400;
@@ -711,9 +729,9 @@ p {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   padding: 8px 16px;
-
+  background-color: transparent;
   resize: none;
-  outline: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-coment-textarea::placeholder {
@@ -753,17 +771,22 @@ p {
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-icon {
-  fill: #fcfcfc;
-}
+
 .link-checkbox {
   text-decoration: underline;
+  color: #4d5ae5;
 }
 
 .modal-checkbox-input:checked + .label-checkbox > .custom-span-checkbox {
   border-color: transparent;
   background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 /*#endregion checkbox*/
 
