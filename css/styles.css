@@ -768,8 +768,8 @@ p {
   align-items: center;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
